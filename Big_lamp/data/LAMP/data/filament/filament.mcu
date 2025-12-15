@@ -1,0 +1,13 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="filament" core="scripted" script="filament.as" linker="true" >
+    
+    <ioport name="PORTA" pins="In1,In2" />
+    
+	<propertygroup name="group name">
+		<property name="Resistance" type="double" />
+		<property name="Current" type="double" />
+		<property name="Proportional" type="bool" />
+	</propertygroup>
+    
+</iou>

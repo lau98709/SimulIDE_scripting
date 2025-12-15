@@ -1,0 +1,5 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" width="3200" height="2400" >
+
+<item itemtype="Package" CircId="Package-1" mainComp="false" Show_id="false" Show_Val="false" Pos="-252,-84" rotation="0" hflip="1" vflip="1" label="h_bridge" idLabPos="14.052,-15.9665" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="-1e+06,-1e+06" circPos="0,0" boardRot="-1e+06" circRot="0" boardHflip="1" boardVflip="1" SubcType="Board" Width="5" Height="4" Logic_Symbol="true" Pins="Pin; type=; xpos=-8; ypos=8; angle=180; length=8; space=0; id=IN1; label=IN1&#xa;Pin; type=; xpos=-8; ypos=16; angle=180; length=8; space=0; id=IN2; label=IN2&#xa;Pin; type=; xpos=-8; ypos=24; angle=180; length=8; space=0; id=EN; label=EN&#xa;Pin; type=; xpos=48; ypos=8; angle=0; length=8; space=0; id=OUT1; label=OUT1&#xa;Pin; type=; xpos=48; ypos=24; angle=0; length=8; space=0; id=OUT2; label=OUT2&#xa;Pin; type=; xpos=20; ypos=-8; angle=90; length=8; space=0; id=VA; label=VA&#xa;Pin; type=; xpos=20; ypos=40; angle=270; length=8; space=0; id=GND; label=GND&#xa;" />
+
+</circuit>

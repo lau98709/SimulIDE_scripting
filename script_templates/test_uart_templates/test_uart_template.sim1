@@ -1,0 +1,19 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" width="3200" height="2400" >
+
+<item itemtype="MCU" CircId="scriptUART-1" mainComp="false" Show_id="true" Show_Val="true" Pos="-4,4" rotation="0" hflip="1" vflip="1" label="scriptUART-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Subcircuit" CircId="Nano-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-116,-108" rotation="-180" hflip="1" vflip="1" label="Nano-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="arduino/arduino.ino.eightanaloginputs.hex" Auto_Load="true" saveEepr="true" MainMcu="false" SerialMon="1" />
+</item>
+
+<item itemtype="Ssd1306" CircId="Ssd1306-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-84,-152" rotation="0" hflip="1" vflip="1" label="Ssd1306-5" idLabPos="-28.3243,-48.5134" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="32 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Nano-2-1" endpinid="scriptUART-1-PORTARx" pointList="-60,28,-12,28" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="scriptUART-1-PORTATx" endpinid="Nano-2-0" pointList="-12,12,-24,12,-24,20,-60,20" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Ssd1306-5-PinSda" endpinid="Nano-2-A4" pointList="-124,-120,-124,-28,-108,-28" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Nano-2-A5" endpinid="Ssd1306-5-PinSck" pointList="-108,-20,-132,-20,-132,-120" />
+
+</circuit>

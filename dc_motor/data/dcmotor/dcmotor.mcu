@@ -1,0 +1,19 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="dcmotor" core="scripted" script="dcmotor.as" linker="true" >
+
+	<display name="screen" width="256" height="256" embeed="true" monitorpos="0" monitorscale="1.0"/>
+
+	<ioport name="PORTA" pins="A,B,E1,E2,BR" />
+
+	<propertygroup name="Properties">
+		<property name="Nominal_voltage" type="double" />
+		<property name="Nominal_speed" type="double" />
+		<property name="Resistance" type="double" />
+		<property name="Inertia" type="double" />
+		<property name="Load" type="double" />
+		<property name="Speed0" type="double" />
+		<property name="Encoder_pulses" type="uint" />
+	</propertygroup>
+
+</iou>

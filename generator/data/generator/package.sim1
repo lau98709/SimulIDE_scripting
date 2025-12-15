@@ -1,0 +1,5 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" width="3200" height="2400" >
+
+<item itemtype="Package" CircId="Package-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-140,-156" rotation="0" hflip="1" vflip="1" label="component" idLabPos="-0.219949,-17.3606" labelrot="0" valLabPos="-16,20" valLabRot="0" SubcType="None" Width="3" Height="4" Logic_Symbol="true" Pins="Pin; type=; xpos=32; ypos=8; angle=0; length=8; space=0; id=out; label=out&#xa;" />
+
+</circuit>

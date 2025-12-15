@@ -1,0 +1,11 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="hbridge" core="scripted" script="hbridge.as" linker="true" >
+    
+    <ioport name="PORTA" pins="IN1,IN2,EN,OUT1,OUT2,VA,GND" />
+
+	<propertygroup name="group name">
+		<property name="Test" type="string" />
+	</propertygroup>
+	
+</iou>

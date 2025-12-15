@@ -1,0 +1,7 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="L298N" core="scripted" script="L298N.as" linker="true" >
+    
+    <ioport name="PORTA" pins="IN1,IN2,ENA,OUT1,OUT2,VA,GND,IN3,IN4,ENB,OUT3,OUT4" />
+	
+</iou>

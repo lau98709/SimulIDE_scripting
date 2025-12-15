@@ -1,0 +1,137 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" width="3200" height="2400" >
+
+<item itemtype="MCU" CircId="thermal_mosfet-13" mainComp="false" Show_id="true" Show_Val="true" Pos="20,124" rotation="0" hflip="1" vflip="1" label="MOSFET" idLabPos="27.6766,-15.5367" labelrot="0" valLabPos="39.104,18.7933" valLabRot="0" P_channel="false" RDSon="0.1" VGS="3" Rth="60" Cth="0.2" Show_temp="true" T_max="150" T_limit="300" simulate="true" Links="TextComponent-30," MainMcu="false" />
+
+<item itemtype="Ground" CircId="Ground-2" mainComp="false" Show_id="false" Show_Val="false" Pos="44,204" rotation="0" hflip="1" vflip="1" label="Ground-2" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Amperimeter" CircId="Amperimeter-18" mainComp="false" Show_id="false" Show_Val="false" Pos="36,-44" rotation="0" hflip="1" vflip="1" label="Amperimeter-18" idLabPos="-24,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Rail" CircId="Rail-28" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-24,-44" rotation="90" hflip="1" vflip="1" label="Rail-28" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="12 V" />
+
+<item itemtype="TextComponent" CircId="TextComponent-30" mainComp="false" Show_id="false" Show_Val="false" Pos="48,160" rotation="0" hflip="1" vflip="1" label="TextComponent-30" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="-4 _px" Border="0 _px" Color="#ffffdc" Opacity="0" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="178.8°C" />
+
+<item itemtype="Subcircuit" CircId="Nano-53" mainComp="false" Show_id="true" Show_Val="false" Pos="-156,28" rotation="-180" hflip="1" vflip="1" label="Nano-53" idLabPos="47.8107,3.25926" labelrot="180" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="ex1/ex1.ino.eightanaloginputs.hex" Auto_Load="true" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Potentiometer" CircId="Potentiometer-54" mainComp="false" ShowProp="Value_Ohm" Show_id="false" Show_Val="true" Pos="-228,108" rotation="-90" hflip="1" vflip="1" label="Potentiometer-54" idLabPos="-16,-40" labelrot="0" valLabPos="24.7752,-31.7716" valLabRot="90" Resistance="1 kΩ" Value_Ohm="838 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Ground" CircId="Ground-55" mainComp="false" Show_id="false" Show_Val="false" Pos="-228,156" rotation="0" hflip="1" vflip="1" label="Ground-55" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Rail" CircId="Rail-56" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-228,60" rotation="90" hflip="1" vflip="1" label="Rail-56" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Diode" CircId="Diode-57" mainComp="false" Show_id="false" Show_Val="false" Pos="-8,36" rotation="-90" hflip="1" vflip="1" label="Diode-57" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Model="Diode Default" Threshold="0.634767 V" MaxCurrent="1 A" Resistance="0.05 Ω" BrkDownV="0 V" SatCurrent="171.435 nA" EmCoef="2" />
+
+<item itemtype="DcMotor" CircId="DcMotor-65" mainComp="false" Show_id="true" Show_Val="false" Pos="44,36" rotation="90" hflip="1" vflip="1" label="DcMotor-65" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="12 V" Resistance="1 Ω" />
+
+<item itemtype="Probe" CircId="Probe-68" mainComp="false" Show_id="false" Show_Val="true" Pos="-172,16" rotation="-45" hflip="1" vflip="1" label="Probe-68" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" Small="false" />
+
+<item itemtype="Probe" CircId="Probe-70" mainComp="false" Show_id="false" Show_Val="true" Pos="-52,16" rotation="-45" hflip="1" vflip="1" label="Probe-70" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" Small="false" />
+
+<item itemtype="Oscope" CircId="Oscope-72" mainComp="false" Show_id="false" Show_Val="false" Pos="-196,-128" rotation="0" hflip="1" vflip="1" label="Oscope-72" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TestTime="0 ns" DoTest="false" TimDiv="1000000000" TimPos="0,0,0,0," VolDiv="2,2,2,2," Tunnels=",,,," Trigger="0" Filter="0.1 V" AutoSC="4" Tracks="2" HideCh="false,false,false,false," VolPos="-5,-5,-5,-5," />
+
+<item itemtype="Tunnel" CircId="Tunnel-73" mainComp="false" Show_id="false" Show_Val="false" Pos="-300,-176" rotation="0" hflip="1" vflip="1" label="Tunnel-73" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="VDS" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-74" mainComp="false" Show_id="false" Show_Val="false" Pos="28,100" rotation="0" hflip="1" vflip="1" label="Tunnel-74" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="VDS" IsBus="false" />
+
+<item itemtype="Ground" CircId="Ground-79" mainComp="false" Show_id="false" Show_Val="false" Pos="172,204" rotation="0" hflip="1" vflip="1" label="Ground-79" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Diode" CircId="Diode-80" mainComp="false" Show_id="false" Show_Val="false" Pos="120,124" rotation="-90" hflip="1" vflip="1" label="Diode-80" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Model="Diode Default" Threshold="0.634767 V" MaxCurrent="1 A" Resistance="0.05 Ω" BrkDownV="0 V" SatCurrent="171.435 nA" EmCoef="2" />
+
+<item itemtype="Tunnel" CircId="Tunnel-82" mainComp="false" Show_id="false" Show_Val="false" Pos="156,52" rotation="0" hflip="1" vflip="1" label="Tunnel-82" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="VDS2" IsBus="false" />
+
+<item itemtype="TextComponent" CircId="TextComponent-83" mainComp="false" Show_id="false" Show_Val="false" Pos="176,32" rotation="0" hflip="1" vflip="1" label="TextComponent-83" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="-4 _px" Border="0 _px" Color="#ffffdc" Opacity="0" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="209.2°C" />
+
+<item itemtype="MCU" CircId="thermal_mosfet-84" mainComp="false" Show_id="true" Show_Val="true" Pos="148,-4" rotation="0" hflip="1" vflip="1" label="MOSFET P" idLabPos="27.6766,-15.5367" labelrot="0" valLabPos="39.104,18.7933" valLabRot="0" P_channel="true" RDSon="0.1" VGS="3" Rth="60" Cth="0.2" Show_temp="true" T_max="150" T_limit="300" simulate="true" Links="TextComponent-83," MainMcu="false" />
+
+<item itemtype="Amperimeter" CircId="Amperimeter-85" mainComp="false" Show_id="false" Show_Val="false" Pos="164,-44" rotation="0" hflip="1" vflip="1" label="Amperimeter-85" idLabPos="-24,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="DcMotor" CircId="DcMotor-86" mainComp="false" Show_id="true" Show_Val="false" Pos="172,124" rotation="90" hflip="1" vflip="1" label="DcMotor-86" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="12 V" Resistance="1 Ω" />
+
+<item itemtype="Rail" CircId="Rail-88" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="104,-44" rotation="90" hflip="1" vflip="1" label="Rail-88" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="12 V" />
+
+<item itemtype="Tunnel" CircId="Tunnel-93" mainComp="false" Show_id="false" Show_Val="false" Pos="-300,-144" rotation="0" hflip="1" vflip="1" label="Tunnel-93" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="VDS2" IsBus="false" />
+
+<item itemtype="Node" CircId="Node-66" mainComp="false" Pos="44,-12" />
+
+<item itemtype="Node" CircId="Node-67" mainComp="false" Pos="44,84" />
+
+<item itemtype="Node" CircId="Node-69" mainComp="false" Pos="-188,76" />
+
+<item itemtype="Node" CircId="Node-75" mainComp="false" Pos="44,100" />
+
+<item itemtype="Node" CircId="Node-77" mainComp="false" Pos="-68,60" />
+
+<item itemtype="Node" CircId="Node-89" mainComp="false" Pos="172,76" />
+
+<item itemtype="Node" CircId="Node-91" mainComp="false" Pos="-68,112" />
+
+<item itemtype="Node" CircId="Node-92" mainComp="false" Pos="172,172" />
+
+<item itemtype="Node" CircId="Node-95" mainComp="false" Pos="172,52" />
+
+<item itemtype="Connector" uid="Connector-64" startpinid="Rail-28-outnod" endpinid="Amperimeter-18-lPin" pointList="-24,-28,-24,-20,28,-20,28,-28" />
+
+<item itemtype="Connector" uid="Connector-67" startpinid="thermal_mosfet-13-PORTAS" endpinid="Ground-2-Gnd" pointList="44,164,44,188" />
+
+<item itemtype="Connector" uid="Connector-128" startpinid="DcMotor-65-lPin" endpinid="Node-66-1" pointList="44,-4,44,-12" />
+
+<item itemtype="Connector" uid="Connector-129" startpinid="Diode-57-rPin" endpinid="Node-66-0" pointList="-8,20,-8,-12,44,-12" />
+
+<item itemtype="Connector" uid="Connector-130" startpinid="Node-66-2" endpinid="Amperimeter-18-rPin" pointList="44,-12,44,-28" />
+
+<item itemtype="Connector" uid="Connector-131" startpinid="DcMotor-65-rPin" endpinid="Node-67-1" pointList="44,76,44,84" />
+
+<item itemtype="Connector" uid="Connector-132" startpinid="Diode-57-lPin" endpinid="Node-67-0" pointList="-8,52,-8,84,44,84" />
+
+<item itemtype="Connector" uid="Connector-140" startpinid="Probe-68-inpin" endpinid="Node-69-1" pointList="-188,32,-188,76" />
+
+<item itemtype="Connector" uid="Connector-141" startpinid="Potentiometer-54-PinM" endpinid="Node-69-0" pointList="-212,108,-188,108,-188,76" />
+
+<item itemtype="Connector" uid="Connector-142" startpinid="Node-69-2" endpinid="Nano-53-A0" pointList="-188,76,-148,76" />
+
+<item itemtype="Connector" uid="Connector-146" startpinid="Tunnel-73-pin" endpinid="Oscope-72-Pin0" pointList="-300,-176,-284,-176" />
+
+<item itemtype="Connector" uid="Connector-147" startpinid="Tunnel-74-pin" endpinid="Node-75-1" pointList="28,100,44,100" />
+
+<item itemtype="Connector" uid="Connector-148" startpinid="Node-67-2" endpinid="Node-75-0" pointList="44,84,44,100" />
+
+<item itemtype="Connector" uid="Connector-149" startpinid="Node-75-2" endpinid="thermal_mosfet-13-PORTAD" pointList="44,100,44,116" />
+
+<item itemtype="Connector" uid="Connector-153" startpinid="Probe-70-inpin" endpinid="Node-77-0" pointList="-68,32,-68,60" />
+
+<item itemtype="Connector" uid="Connector-154" startpinid="Node-77-2" endpinid="Nano-53-11" pointList="-68,60,-100,60" />
+
+<item itemtype="Connector" uid="Connector-158" startpinid="Potentiometer-54-PinB" endpinid="Rail-56-outnod" pointList="-228,92,-228,76" />
+
+<item itemtype="Connector" uid="Connector-159" startpinid="Potentiometer-54-PinA" endpinid="Ground-55-Gnd" pointList="-228,124,-228,140" />
+
+<item itemtype="Connector" uid="connector-166" startpinid="Rail-88-outnod" endpinid="Amperimeter-85-lPin" pointList="104,-28,104,-20,156,-20,156,-28" />
+
+<item itemtype="Connector" uid="Connector-174" startpinid="Diode-80-rPin" endpinid="Node-89-0" pointList="120,108,120,76,172,76" />
+
+<item itemtype="Connector" uid="Connector-175" startpinid="Node-89-2" endpinid="DcMotor-86-lPin" pointList="172,76,172,84" />
+
+<item itemtype="Connector" uid="Connector-180" startpinid="thermal_mosfet-84-PORTAG" endpinid="Node-91-1" pointList="140,12,100,12,100,212,-68,212,-68,112" />
+
+<item itemtype="Connector" uid="Connector-181" startpinid="Node-77-1" endpinid="Node-91-0" pointList="-68,60,-68,112" />
+
+<item itemtype="Connector" uid="Connector-182" startpinid="Node-91-2" endpinid="thermal_mosfet-13-PORTAG" pointList="-68,112,-8,112,-8,140,12,140" />
+
+<item itemtype="Connector" uid="Connector-183" startpinid="Ground-79-Gnd" endpinid="Node-92-1" pointList="172,188,172,172" />
+
+<item itemtype="Connector" uid="Connector-184" startpinid="Diode-80-lPin" endpinid="Node-92-0" pointList="120,140,120,172,172,172" />
+
+<item itemtype="Connector" uid="Connector-185" startpinid="Node-92-2" endpinid="DcMotor-86-rPin" pointList="172,172,172,164" />
+
+<item itemtype="Connector" uid="Connector-186" startpinid="Tunnel-93-pin" endpinid="Oscope-72-Pin1" pointList="-300,-144,-284,-144" />
+
+<item itemtype="Connector" uid="Connector-193" startpinid="thermal_mosfet-84-PORTAD" endpinid="Amperimeter-85-rPin" pointList="172,-12,172,-28" />
+
+<item itemtype="Connector" uid="Connector-194" startpinid="thermal_mosfet-84-PORTAS" endpinid="Node-95-1" pointList="172,36,172,52" />
+
+<item itemtype="Connector" uid="Connector-195" startpinid="Tunnel-82-pin" endpinid="Node-95-0" pointList="156,52,172,52" />
+
+<item itemtype="Connector" uid="Connector-196" startpinid="Node-95-2" endpinid="Node-89-1" pointList="172,52,172,76" />
+
+</circuit>

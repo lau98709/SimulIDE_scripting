@@ -1,0 +1,343 @@
+// ===========================
+// Classe Matrix
+// ===========================
+class Matrix
+{
+  uint rows;             // nombre de lignes
+  uint cols;             // nombre de colonnes
+  protected array<double> data;   // stockage en tableau linéaire (taille rows*cols)
+
+  // Constructeur par défaut (utilisé pour les copies temporaires)
+  Matrix() 
+  { 
+    rows = 0; 
+    cols = 0; 
+  }
+
+  // Constructeur avec dimensions
+  Matrix(uint _rows, uint _cols)
+  {
+    rows = _rows;
+    cols = _cols;
+    data.resize(rows * cols);
+    for(uint i = 0; i < data.length(); i++)
+      data[i] = 0.0;
+	if (rows == cols) {
+		for(uint i = 0; i < rows; i++)
+			data[i*rows+i] = 1.0;
+	}
+  }
+
+  // Opérateur d'affectation (pour copier correctement les objets Matrix)
+  Matrix &opAssign(const Matrix &in other)
+  {
+    rows = other.rows;
+    cols = other.cols;
+    data = other.data;
+    return this;
+  }
+
+  // Accès à un élément (r, c)
+  double get(int r, int c) const
+  {
+    return data[r * cols + c];
+  }
+
+  void set(int r, int c, double value)
+  {
+    data[r * cols + c] = value;
+  }
+
+  // -------------------------------
+  // Opérateur d'addition
+  Matrix opAdd(const Matrix &in other) const
+  {
+    Matrix result(rows, cols);
+    for (uint i = 0; i < rows; i++)
+    {
+      for (uint j = 0; j < cols; j++)
+      {
+        result.set(i, j, get(i, j) + other.get(i, j));
+      }
+    }
+    return result;
+  }
+
+  // -------------------------------
+  // Opérateur de multiplication matricielle
+  Matrix opMul(const Matrix &in other) const
+  {
+    Matrix result(rows, other.cols);
+    for (uint i = 0; i < rows; i++)
+    {
+      for (uint j = 0; j < other.cols; j++)
+      {
+        double sum = 0.0;
+        for (uint k = 0; k < cols; k++)
+        {
+          sum += get(i, k) * other.get(k, j);
+        }
+        result.set(i, j, sum);
+      }
+    }
+    return result;
+  }
+
+  // -------------------------------
+  // Multiplication par un scalaire
+  Matrix opMul(double factor) const
+  {
+    Matrix result(rows, cols);
+    for (uint i = 0; i < rows; i++)
+    {
+      for (uint j = 0; j < cols; j++)
+      {
+        result.set(i, j, get(i, j) * factor);
+      }
+    }
+    return result;
+  }
+
+  // -------------------------------
+  // Inversion (pour les matrices carrées)
+  Matrix Inverse() const
+  {
+    uint n = rows;
+    // Copie de la matrice
+    Matrix A(n, n);
+    for (uint i = 0; i < n; i++)
+      for (uint j = 0; j < n; j++)
+        A.set(i, j, get(i, j));
+
+    // Création de la matrice identité via la fonction globale
+    Matrix I = Identity(n);
+
+    // Processus d'élimination de Gauss-Jordan
+    for (uint i = 0; i < n; i++)
+    {
+      double pivot = A.get(i, i);
+      if(pivot == 0)
+      {
+        // Ici, on ne gère pas l'erreur : vous pouvez adapter ce cas
+        return I;
+      }
+      // Normalisation de la ligne i
+      for (uint j = 0; j < n; j++)
+      {
+        A.set(i, j, A.get(i, j) / pivot);
+        I.set(i, j, I.get(i, j) / pivot);
+      }
+      // Annulation des autres lignes
+      for (uint k = 0; k < n; k++)
+      {
+        if(k == i) continue;
+        double factor = A.get(k, i);
+        for (uint j = 0; j < n; j++)
+        {
+          A.set(k, j, A.get(k, j) - factor * A.get(i, j));
+          I.set(k, j, I.get(k, j) - factor * I.get(i, j));
+        }
+      }
+    }
+    return I;
+  }
+};
+
+// ===========================
+// Fonctions globales pour matrices homogènes
+// ===========================
+
+// Matrice identité de taille n x n
+Matrix Identity(uint n)
+{
+  Matrix result(n, n);
+  for (uint i = 0; i < n; i++)
+  {
+    result.set(i, i, 1.0);
+  }
+  return result;
+}
+
+// Matrice de translation en 3D (pour transformations homogènes 4x4)
+Matrix Translation2D(double tx, double ty)
+{
+  Matrix result = Identity(3);
+  result.set(0, 2, tx);
+  result.set(1, 2, ty);
+  return result;
+}
+
+// Matrice de translation en 3D (pour transformations homogènes 4x4)
+Matrix Translation3D(double tx, double ty, double tz)
+{
+  Matrix result = Identity(4);
+  result.set(0, 3, tx);
+  result.set(1, 3, ty);
+  result.set(2, 3, tz);
+  return result;
+}
+
+// Rotation sur le plan 2D (angle en radians)
+Matrix Rotation2D(double angle)
+{
+  Matrix result = Identity(3);
+  double cosA = cos(angle);
+  double sinA = sin(angle);
+  result.set(0, 0, cosA);
+  result.set(0, 1, -sinA);
+  result.set(1, 0, sinA);
+  result.set(1, 1, cosA);
+  return result;
+}
+
+// Rotation autour de l'axe X (angle en radians)
+Matrix Rotation3DX(double angle)
+{
+  Matrix result = Identity(4);
+  double cosA = cos(angle);
+  double sinA = sin(angle);
+  result.set(1, 1, cosA);
+  result.set(1, 2, -sinA);
+  result.set(2, 1, sinA);
+  result.set(2, 2, cosA);
+  return result;
+}
+
+// Rotation autour de l'axe Y (angle en radians)
+Matrix Rotation3DY(double angle)
+{
+  Matrix result = Identity(4);
+  double cosA = cos(angle);
+  double sinA = sin(angle);
+  result.set(0, 0, cosA);
+  result.set(0, 2, sinA);
+  result.set(2, 0, -sinA);
+  result.set(2, 2, cosA);
+  return result;
+}
+
+// Rotation autour de l'axe Z (angle en radians)
+Matrix Rotation3DZ(double angle)
+{
+  Matrix result = Identity(4);
+  double cosA = cos(angle);
+  double sinA = sin(angle);
+  result.set(0, 0, cosA);
+  result.set(0, 1, -sinA);
+  result.set(1, 0, sinA);
+  result.set(1, 1, cosA);
+  return result;
+}
+
+// ===========================
+// Classe Vector (dérivée de Matrix)
+// ===========================
+class Vector : Matrix
+{
+  // Constructeur par défaut (nécessaire pour l'héritage)
+  Vector() { }
+
+  // Constructeur qui crée un vecteur de dimension n (vecteur colonne)
+  Vector(int n)
+  {
+    rows = n;
+    cols = 1;
+    data.resize(n);
+    for(uint i = 0; i < data.length(); i++)
+      data[i] = 0.0;
+  }
+
+  // Constructeur depuis un tableau de valeurs
+  Vector(const array<double> &in values)
+  {
+    rows = values.length();
+    cols = 1;
+    data.resize(rows);
+    for (uint i = 0; i < rows; i++)
+      data[i] = values[i];
+  }
+
+  // -------------------------------
+  // Addition de deux vecteurs
+  Vector Add(const Vector &in other) const
+  {
+    // Vérifier que les dimensions sont compatibles
+    Vector result(rows);
+    for (uint i = 0; i < rows; i++)
+      result.set(i, 0, get(i, 0) + other.get(i, 0));
+    return result;
+  }
+
+  // -------------------------------
+  // Soustraction de deux vecteurs
+  Vector Subtract(const Vector &in other) const
+  {
+    // Vérifier que les dimensions sont compatibles
+    Vector result(rows);
+    for (uint i = 0; i < rows; i++)
+      result.set(i, 0, get(i, 0) - other.get(i, 0));
+    return result;
+  }
+
+  // -------------------------------
+  // Multiplication par un scalaire
+  Vector Scale(double s) const
+  {
+    Vector result(rows);
+    for (uint i = 0; i < rows; i++)
+      result.set(i, 0, get(i, 0) * s);
+    return result;
+  }
+
+  // -------------------------------
+  // Produit scalaire
+  double Dot(const Vector &in other) const
+  {
+    double sum = 0.0;
+    for (uint i = 0; i < rows; i++)
+      sum += get(i, 0) * other.get(i, 0);
+    return sum;
+  }
+
+  // -------------------------------
+  // Produit vectoriel (défini pour des vecteurs 3D uniquement)
+  Vector Cross(const Vector &in other) const
+  {
+    Vector result(3);
+    result.set(0, 0, get(1, 0) * other.get(2, 0) - get(2, 0) * other.get(1, 0));
+    result.set(1, 0, get(2, 0) * other.get(0, 0) - get(0, 0) * other.get(2, 0));
+    result.set(2, 0, get(0, 0) * other.get(1, 0) - get(1, 0) * other.get(0, 0));
+    return result;
+  }
+
+  // -------------------------------
+  // Norme (longueur) du vecteur
+  double Length() const
+  {
+    double sum = 0.0;
+    for (uint i = 0; i < rows; i++)
+      sum += get(i, 0) * get(i, 0);
+    return sqrt(sum);
+  }
+
+  // -------------------------------
+  // Conversion depuis les coordonnées homogènes vers cartesiennes  
+  // On suppose que le dernier élément (w) n'est pas nul.
+  array<double> FromHomogeneous() {
+	array<double> p;
+    double w = get(rows - 1, 0);
+    for (uint i = 0; i < rows - 1; i++)
+      p.insertLast(get(i, 0) / w);
+    return p;
+  }
+
+  // Conversion en coordonnées homogènes (on ajoute une coordonnée 1)
+  Vector ToHomogeneous() const
+  {
+    Vector result(rows + 1);
+    for (uint i = 0; i < rows; i++)
+      result.set(i, 0, get(i, 0));
+    result.set(rows, 0, 1.0);
+    return result;
+  }
+}

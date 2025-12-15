@@ -1,0 +1,14 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="generator" core="scripted" script="generator.as" linker="true" >
+
+	<display name="screen" width="256" height="256" embeed="true" monitorpos="0" monitorscale="1.0"/>
+
+	<ioport name="PORTA" pins="out" />
+
+	<propertygroup name="group name">
+		<property name="Sample_period" type="double" />
+		<property name="n_points" type="uint" />
+	</propertygroup>
+
+</iou>

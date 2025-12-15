@@ -1,0 +1,11 @@
+Simulation of a large lamp (for educational use)
+Lamp whose color changes depending on the current flowing through it.
+2 modes:
+- Proportional mode: the brightness of the lamp is proportional to the current flowing through it. When the current is greater than the value of "Current", the lamp flashes red to indicate a current overrun.
+- Non-proportional mode: the lamp flashes erratically when the current is less than the value of "Current". The brightness is stable when the current is greater than "Current".
+
+The properties must be modified in "filaments".
+
+Development: this is a scripted component. The scripted component is "filament". A subcircuit has been built around "filament". This is linked to the disk, the graphic element, which constitutes the background of the lamp. A resistor is used to simulate the physical part of the lamp.
+
+Usage: "LAMP" must be placed in a "data" subdirectory next to the simulation file. To insert the component into your ".sim1" simulation file, you can either add an <item> line in the .sim1 file with the value CircId="LAMP-xxx". Or, you can copy and paste it from the example .sim1 file.

@@ -1,0 +1,18 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="biglamp" core="scripted" script="biglamp.as" linker="true" >
+
+	<display name="screen" width="128" height="128" embeed="true" monitorpos="0" monitorscale="1.5"/>
+    
+    <ioport name="PORTA" pins="a,b" />
+    
+	<propertygroup name="group name">
+		<property name="Red" type="uint" />
+		<property name="Green" type="uint" />
+		<property name="Blue" type="uint" />
+		<property name="Resistance" type="double" />
+		<property name="Current" type="double" />
+		<property name="Proportional" type="bool" />
+	</propertygroup>
+    
+</iou>

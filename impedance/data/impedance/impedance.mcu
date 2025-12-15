@@ -1,0 +1,11 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="impedance" core="scripted" script="impedance.as" linker="true" >
+    
+    <ioport name="PORTA" pins="a,b" />
+
+	<propertygroup name="group name">
+		<property name="Resistance" type="double" />
+	</propertygroup>
+	
+</iou>

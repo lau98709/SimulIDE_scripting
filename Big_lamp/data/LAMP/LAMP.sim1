@@ -1,0 +1,47 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" width="3200" height="2400" >
+
+<item itemtype="Package" CircId="Package-892" mainComp="false" Show_id="false" Show_Val="false" Pos="-500,116" rotation="0" hflip="1" vflip="1" label="LAMP" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="-1e+06,-1e+06" circPos="0,0" boardRot="-1e+06" circRot="0" boardHflip="1" boardVflip="1" SubcType="Board" Width="8" Height="8" Package_File="LAMP_LS.package" Logic_Symbol="true" Pins="Pin; type=; xpos=32; ypos=-8; angle=90; length=8; space=0; id=IN1; label=IN1&#xa;Pin; type=; xpos=32; ypos=72; angle=270; length=8; space=0; id=IN2; label=IN2&#xa;" />
+
+<item itemtype="MCU" CircId="filament-1" mainComp="true" Show_id="false" Show_Val="true" Pos="-336,124" rotation="0" hflip="1" vflip="1" label="filament" idLabPos="-20.9789,53.9256" labelrot="-90" valLabPos="-16,20" valLabRot="0" boardPos="152,8" circPos="-324,124" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" Resistance="5" Current="1" Links="Ellipse-1,Resistor-1," MainMcu="true" />
+
+<item itemtype="Resistor" CircId="Resistor-1" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-372,148" rotation="90" hflip="1" vflip="1" label="Resistance" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" boardPos="104,32" circPos="-372,148" boardRot="90" circRot="90" boardHflip="1" boardVflip="1" Resistance="10 Ω" />
+
+<item itemtype="Ellipse" CircId="Ellipse-1" mainComp="false" Show_id="false" Show_Val="false" Pos="-468,148" rotation="0" hflip="1" vflip="1" label="Ellipse-1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="32,32" circPos="-468,148" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" H_size="60 _px" V_size="60 _px" Angle="0 _º" Border="0 _px" Z_Value="-1" Color="#a0a0a4" Opacity="1" />
+
+<item itemtype="Line" CircId="Line-895" mainComp="false" Show_id="false" Show_Val="false" Pos="-468,124" rotation="0" hflip="1" vflip="1" label="Line-895" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="32,8" circPos="-468,124" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" H_size="0 _px" V_size="10 _px" Angle="0 _º" Border="2 _px" Z_Value="-1" Color="#000000" Opacity="1" />
+
+<item itemtype="Line" CircId="Line-896" mainComp="false" Show_id="false" Show_Val="false" Pos="-468,172" rotation="0" hflip="1" vflip="1" label="Line-896" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="32,56" circPos="-468,172" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" H_size="0 _px" V_size="10 _px" Angle="0 _º" Border="2 _px" Z_Value="-1" Color="#000000" Opacity="1" />
+
+<item itemtype="Line" CircId="Line-897" mainComp="false" Show_id="false" Show_Val="false" Pos="-472,132" rotation="0" hflip="1" vflip="1" label="Line-897" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="28,16" circPos="-472,132" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" H_size="5 _px" V_size="3 _px" Angle="0 _º" Border="2 _px" Z_Value="-1" Color="#000000" Opacity="1" />
+
+<item itemtype="Line" CircId="Line-898" mainComp="false" Show_id="false" Show_Val="false" Pos="-468,136" rotation="0" hflip="-1" vflip="1" label="Line-898" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="32,20" circPos="-468,136" boardRot="0" circRot="0" boardHflip="-1" boardVflip="1" H_size="10 _px" V_size="6 _px" Angle="0 _º" Border="2 _px" Z_Value="-1" Color="#000000" Opacity="1" />
+
+<item itemtype="Line" CircId="Line-899" mainComp="false" Show_id="false" Show_Val="false" Pos="-468,144" rotation="0" hflip="1" vflip="1" label="Line-899" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="32,28" circPos="-468,144" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" H_size="10 _px" V_size="6 _px" Angle="0 _º" Border="2 _px" Z_Value="-1" Color="#000000" Opacity="1" />
+
+<item itemtype="Line" CircId="Line-900" mainComp="false" Show_id="false" Show_Val="false" Pos="-468,160" rotation="0" hflip="1" vflip="1" label="Line-900" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="32,44" circPos="-468,160" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" H_size="10 _px" V_size="6 _px" Angle="0 _º" Border="2 _px" Z_Value="-1" Color="#000000" Opacity="1" />
+
+<item itemtype="Line" CircId="Line-901" mainComp="false" Show_id="false" Show_Val="false" Pos="-468,152" rotation="0" hflip="-1" vflip="1" label="Line-901" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="32,36" circPos="-468,152" boardRot="0" circRot="0" boardHflip="-1" boardVflip="1" H_size="10 _px" V_size="6 _px" Angle="0 _º" Border="2 _px" Z_Value="-1" Color="#000000" Opacity="1" />
+
+<item itemtype="Line" CircId="Line-902" mainComp="false" Show_id="false" Show_Val="false" Pos="-472,164" rotation="0" hflip="1" vflip="-1" label="Line-902" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="28,48" circPos="-472,164" boardRot="0" circRot="0" boardHflip="1" boardVflip="-1" H_size="5 _px" V_size="3 _px" Angle="0 _º" Border="2 _px" Z_Value="-1" Color="#000000" Opacity="1" />
+
+<item itemtype="Tunnel" CircId="Tunnel-903" mainComp="false" Show_id="false" Show_Val="false" Pos="-380,92" rotation="0" hflip="1" vflip="1" label="Tunnel-903" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="120,-24" circPos="-380,92" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" Name="IN1" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-904" mainComp="false" Show_id="false" Show_Val="false" Pos="-380,204" rotation="0" hflip="1" vflip="1" label="Tunnel-904" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="120,88" circPos="-380,204" boardRot="0" circRot="0" boardHflip="1" boardVflip="1" Name="IN2" IsBus="false" />
+
+<item itemtype="Node" CircId="Node-905" mainComp="false" boardPos="-1e+06,-1e+06" circPos="0,0" boardRot="-1e+06" circRot="0" boardHflip="1" boardVflip="1" Pos="-372,188" />
+
+<item itemtype="Node" CircId="Node-906" mainComp="false" boardPos="-1e+06,-1e+06" circPos="0,0" boardRot="-1e+06" circRot="0" boardHflip="1" boardVflip="1" Pos="-372,108" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Tunnel-904-pin" endpinid="Node-905-1" pointList="-380,204,-372,204,-372,188" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Resistor-1-rPin" endpinid="Node-905-0" pointList="-372,164,-372,188" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Node-905-2" endpinid="filament-1-PORTAIn2" pointList="-372,188,-328,188,-328,180" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Tunnel-903-pin" endpinid="Node-906-1" pointList="-380,92,-372,92,-372,108" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Resistor-1-lPin" endpinid="Node-906-0" pointList="-372,132,-372,108" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Node-906-2" endpinid="filament-1-PORTAIn1" pointList="-372,108,-328,108,-328,116" />
+
+</circuit>

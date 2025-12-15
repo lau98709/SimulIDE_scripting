@@ -1,0 +1,8 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="Display" core="scripted" script="display.as" linker="true" >
+
+	<display name="screen" width="320" height="240" embeed="true" monitorpos="0" monitorscale="1.5"/>
+	<display name="graphic" width="320" height="120" monitorpos="1" monitorscale="1.5"/>
+
+</iou>

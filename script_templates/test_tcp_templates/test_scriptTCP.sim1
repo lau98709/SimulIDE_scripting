@@ -1,0 +1,5 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" width="3200" height="2400" >
+
+<item itemtype="MCU" CircId="scriptTCP-1" mainComp="false" Show_id="true" Show_Val="true" Pos="0,0" rotation="0" hflip="1" vflip="1" label="scriptTCP-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" MainMcu="true" />
+
+</circuit>

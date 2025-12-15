@@ -1,0 +1,3 @@
+The attached component converts PWM pulses to DC voltage.
+
+This is a scripted component. The output is calculated as the average of the output and the last voltage multiplied by the duration of the last voltage change.

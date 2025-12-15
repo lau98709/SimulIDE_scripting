@@ -1,0 +1,13 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="heat_resistor" core="scripted" script="heat_resistor.as" linker="true" >
+
+	<ioport name="PORTA" pins="A,B" />
+
+	<propertygroup name="group name">
+		<property name="Resistance" type="double" />
+		<property name="Thermal_resistance" type="double" />
+		<property name="Temperature" type="double" />
+	</propertygroup>
+
+</iou>

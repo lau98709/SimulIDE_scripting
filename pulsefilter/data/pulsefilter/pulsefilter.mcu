@@ -1,0 +1,11 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="pulsefilter" core="scripted" script="pulsefilter.as" linker="true" >
+    
+    <ioport name="PORTA" pins="in,out" />
+
+	<propertygroup name="group name">
+		<property name="Test" type="string" />
+	</propertygroup>
+	
+</iou>

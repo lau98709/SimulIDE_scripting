@@ -1,0 +1,37 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" width="3200" height="2400" >
+
+<item itemtype="Subcircuit" CircId="LAMP-1" mainComp="false" Show_id="true" Show_Val="true" Pos="-100,-36" rotation="0" hflip="1" vflip="1" label="lampe" idLabPos="37.7349,-16.0186" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="filament-1" Resistance="11" Current="0.9" Proportional="false" Links="1@Ellipse-1,1@Resistor-1," MainMcu="true" />
+</item>
+
+<item itemtype="Rail" CircId="Rail-11" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-68,-76" rotation="90" hflip="1" vflip="1" label="Rail-11" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="12 V" />
+
+<item itemtype="Oscope" CircId="Oscope-12" mainComp="false" Show_id="false" Show_Val="false" Pos="12,-180" rotation="0" hflip="1" vflip="1" label="Oscope-12" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TestTime="0 ns" DoTest="false" TimDiv="1000000000" TimPos="0,0,0,0," VolDiv="1,1,1,1," Tunnels=",,,," Trigger="0" Filter="0.1 V" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="0,0,0,0," />
+
+<item itemtype="Resistor" CircId="Resistor-10" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-124,108" rotation="0" hflip="1" vflip="1" label="Resistor-10" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="430 Ω" />
+
+<item itemtype="Ground" CircId="Ground-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-68,148" rotation="0" hflip="1" vflip="1" label="Ground-9" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="BJT" CircId="BJT-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-76,108" rotation="0" hflip="1" vflip="1" label="BJT-7" idLabPos="18,0" labelrot="0" valLabPos="-16,20" valLabRot="0" PNP="false" Gain="100" Vcrit="0.670736 V" />
+
+<item itemtype="Subcircuit" CircId="Nano-6" mainComp="false" Show_id="true" Show_Val="false" Pos="-268,-36" rotation="-180" hflip="1" vflip="1" label="Nano-6" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="test_lamp_arduino/test_lamp_arduino.ino.eightanaloginputs.hex" Auto_Load="true" saveEepr="true" MainMcu="false" SerialMon="-1" />
+</item>
+
+<item itemtype="Node" CircId="Node-13" mainComp="false" Pos="-180,-4" />
+
+<item itemtype="Connector" uid="Connector-16" startpinid="Rail-11-outnod" endpinid="LAMP-1-IN1" pointList="-68,-60,-68,-44" />
+
+<item itemtype="Connector" uid="Connector-19" startpinid="Node-13-2" endpinid="Resistor-10-lPin" pointList="-180,-4,-172,-4,-172,108,-140,108" />
+
+<item itemtype="Connector" uid="Connector-18" startpinid="Nano-6-11" endpinid="Node-13-0" pointList="-212,-4,-180,-4" />
+
+<item itemtype="Connector" uid="Connector-17" startpinid="Oscope-12-Pin0" endpinid="Node-13-1" pointList="-76,-228,-180,-228,-180,-4" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Resistor-10-rPin" endpinid="BJT-7-base" pointList="-108,108,-92,108" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="BJT-7-emiter" endpinid="Ground-9-Gnd" pointList="-68,124,-68,132" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="BJT-7-collector" endpinid="LAMP-1-IN2" pointList="-68,92,-68,36" />
+
+</circuit>

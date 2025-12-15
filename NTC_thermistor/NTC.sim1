@@ -1,0 +1,39 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" width="3200" height="2400" >
+
+<item itemtype="MCU" CircId="NTC_thermistor-1" mainComp="false" Show_id="true" Show_Val="true" Pos="12,4" rotation="0" hflip="1" vflip="1" label="NTC-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" R0="100000" Beta="3950" Links="heat_resistor-1,TextComponent-10," MainMcu="true" />
+
+<item itemtype="MCU" CircId="heat_resistor-1" mainComp="false" Show_id="true" Show_Val="true" Pos="-124,0" rotation="0" hflip="1" vflip="1" label="heat_resistor-1" idLabPos="0,-20" labelrot="0" valLabPos="26.3329,0.863203" valLabRot="0" Resistance="4" Thermal_resistance="5" Temperature="225.398" Links="NTC_thermistor-1,TextComponent-9," MainMcu="false" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-2" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-176,68" rotation="0" hflip="1" vflip="1" label="Voltage Source-2" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="8.976 V" MaxValue="12 V" MinValue="0 V" />
+
+<item itemtype="Ground" CircId="Ground-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-108,108" rotation="0" hflip="1" vflip="1" label="Ground-3" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-4" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-12,76" rotation="0" hflip="1" vflip="1" label="Resistor-4" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="1 kΩ" />
+
+<item itemtype="Ground" CircId="Ground-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-36,108" rotation="0" hflip="1" vflip="1" label="Ground-5" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Rail" CircId="Rail-6" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="52,-12" rotation="90" hflip="1" vflip="1" label="Rail-6" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Probe" CircId="Probe-7" mainComp="false" Show_id="false" Show_Val="true" Pos="80,80" rotation="-45" hflip="1" vflip="1" label="Probe-7" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" Small="false" />
+
+<item itemtype="TextComponent" CircId="TextComponent-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-124,116" rotation="0" hflip="1" vflip="1" label="TextComponent-9" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="0 _px" Border="0 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="225.398" />
+
+<item itemtype="TextComponent" CircId="TextComponent-10" mainComp="false" Show_id="false" Show_Val="false" Pos="-8,116" rotation="0" hflip="1" vflip="1" label="TextComponent-10" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="0 _px" Border="0 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="T&#x3D225.398,R&#x3D333.366" />
+
+<item itemtype="Node" CircId="Node-11" mainComp="false" Pos="12,76" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Voltage Source-2-outPin" endpinid="heat_resistor-1-PORTAA" pointList="-148,84,-116,84,-116,64" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="heat_resistor-1-PORTAB" endpinid="Ground-3-Gnd" pointList="-108,64,-108,92" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="Ground-5-Gnd" endpinid="Resistor-4-lPin" pointList="-36,92,-36,76,-28,76" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Rail-6-outnod" endpinid="NTC_thermistor-1-PORTAB" pointList="52,4,52,76,28,76,28,68" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Probe-7-inpin" endpinid="Node-11-1" pointList="64,96,12,96,12,76" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="NTC_thermistor-1-PORTAA" endpinid="Node-11-0" pointList="20,68,20,76,12,76" />
+
+<item itemtype="Connector" uid="Connector-15" startpinid="Node-11-2" endpinid="Resistor-4-rPin" pointList="12,76,4,76" />
+
+</circuit>

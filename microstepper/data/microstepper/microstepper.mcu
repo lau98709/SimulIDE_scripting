@@ -1,0 +1,16 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="microstepper" core="scripted" script="microstepper.as" linker="true" >
+
+	<display name="screen" width="256" height="256" embeed="true" monitorpos="0" monitorscale="1.0"/>
+
+	<ioport name="PORTA" pins="A1,B1,A2,B2,COM" />
+
+	<propertygroup name="group name">
+		<property name="Poles" type="uint" />
+		<property name="Inertia" type="double" />
+		<property name="Friction" type="double" />
+		<property name="Bipolar" type="bool" />
+	</propertygroup>
+
+</iou>

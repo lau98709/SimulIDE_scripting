@@ -1,0 +1,5 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" width="3200" height="2400" >
+
+<item itemtype="Package" CircId="Package-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-252,-84" rotation="0" hflip="1" vflip="1" label="Package-1" idLabPos="14.052,-15.9665" labelrot="0" valLabPos="-16,20" valLabRot="0" boardPos="-1e+06,-1e+06" circPos="0,0" boardRot="-1e+06" circRot="0" boardHflip="1" boardVflip="1" SubcType="Board" Width="2" Height="6" Package_File="filament_LS.package" Logic_Symbol="true" Pins="Pin; type=; xpos=8; ypos=-8; angle=90; length=8; space=0; id=In1; label=In1&#xa;Pin; type=; xpos=8; ypos=56; angle=270; length=8; space=0; id=In2; label=In2&#xa;" />
+
+</circuit>

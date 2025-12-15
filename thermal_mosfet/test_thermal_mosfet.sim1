@@ -1,0 +1,95 @@
+<circuit version="1.2.0-RC1" rev="2300" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" width="3200" height="2400" >
+
+<item itemtype="MCU" CircId="thermal_mosfet-13" mainComp="false" Show_id="true" Show_Val="true" Pos="20,124" rotation="0" hflip="1" vflip="1" label="MOSFET" idLabPos="27.6766,-15.5367" labelrot="0" valLabPos="39.104,18.7933" valLabRot="0" RDSon="0.1" VGS="3" Rth="60" Cth="0.05" T_max="150" T_limit="1e+06" simulate="true" Links="TextComponent-30," MainMcu="false" />
+
+<item itemtype="Ground" CircId="Ground-2" mainComp="false" Show_id="false" Show_Val="false" Pos="44,204" rotation="0" hflip="1" vflip="1" label="Ground-2" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Amperimeter" CircId="Amperimeter-18" mainComp="false" Show_id="false" Show_Val="false" Pos="36,-36" rotation="0" hflip="1" vflip="1" label="Amperimeter-18" idLabPos="-24,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Rail" CircId="Rail-28" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-24,-36" rotation="90" hflip="1" vflip="1" label="Rail-28" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="12 V" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-29" mainComp="false" Show_id="false" Show_Val="false" Pos="-36,140" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-29" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Small="false" Out="true" />
+
+<item itemtype="TextComponent" CircId="TextComponent-30" mainComp="false" Show_id="false" Show_Val="false" Pos="48,160" rotation="0" hflip="1" vflip="1" label="TextComponent-30" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="-4 _px" Border="0 _px" Color="#ffffdc" Opacity="0" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="739.0°C" />
+
+<item itemtype="DcMotor" CircId="DcMotor-31" mainComp="false" Show_id="true" Show_Val="false" Pos="44,36" rotation="90" hflip="1" vflip="1" label="DcMotor-31" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="1 Ω" />
+
+<item itemtype="Probe" CircId="Probe-32" mainComp="false" Show_id="false" Show_Val="true" Pos="92,84" rotation="-45" hflip="1" vflip="1" label="Probe-32" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" Small="false" />
+
+<item itemtype="MCU" CircId="thermal_mosfet-36" mainComp="false" Show_id="true" Show_Val="true" Pos="192,124" rotation="0" hflip="1" vflip="1" label="thermal_mosfet-36" idLabPos="27.6766,-15.5367" labelrot="0" valLabPos="39.104,18.7933" valLabRot="0" RDSon="0.1" VGS="3" Rth="60" Cth="0.05" T_max="150" T_limit="300" simulate="true" Links="TextComponent-47," MainMcu="false" />
+
+<item itemtype="Amperimeter" CircId="Amperimeter-37" mainComp="false" Show_id="false" Show_Val="false" Pos="208,-36" rotation="0" hflip="1" vflip="1" label="Amperimeter-37" idLabPos="-24,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="DcMotor" CircId="DcMotor-38" mainComp="false" Show_id="true" Show_Val="false" Pos="216,36" rotation="90" hflip="1" vflip="1" label="DcMotor-38" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="1 Ω" />
+
+<item itemtype="Rail" CircId="Rail-40" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="148,-36" rotation="90" hflip="1" vflip="1" label="Rail-40" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="12 V" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-41" mainComp="false" Show_id="false" Show_Val="false" Pos="136,140" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-41" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Small="false" Out="true" />
+
+<item itemtype="Ground" CircId="Ground-42" mainComp="false" Show_id="false" Show_Val="false" Pos="216,204" rotation="0" hflip="1" vflip="1" label="Ground-42" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="thermal_mosfet-43" mainComp="false" Show_id="true" Show_Val="true" Pos="260,124" rotation="0" hflip="1" vflip="1" label="thermal_mosfet-43" idLabPos="27.6766,-15.5367" labelrot="0" valLabPos="39.104,18.7933" valLabRot="0" RDSon="0.1" VGS="3" Rth="60" Cth="0.05" T_max="150" T_limit="300" simulate="true" MainMcu="false" />
+
+<item itemtype="Ground" CircId="Ground-44" mainComp="false" Show_id="false" Show_Val="false" Pos="284,204" rotation="0" hflip="1" vflip="1" label="Ground-44" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="TextComponent" CircId="TextComponent-47" mainComp="false" Show_id="false" Show_Val="false" Pos="172,160" rotation="0" hflip="1" vflip="1" label="TextComponent-47" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="-4 _px" Border="0 _px" Color="#ffffdc" Opacity="0" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="114.9°C" />
+
+<item itemtype="MCU" CircId="thermal_mosfet-48" mainComp="false" Show_id="true" Show_Val="true" Pos="324,124" rotation="0" hflip="1" vflip="1" label="thermal_mosfet-48" idLabPos="27.6766,-15.5367" labelrot="0" valLabPos="39.104,18.7933" valLabRot="0" RDSon="0.1" VGS="3" Rth="60" Cth="0.05" T_max="150" T_limit="300" simulate="true" MainMcu="true" />
+
+<item itemtype="Ground" CircId="Ground-50" mainComp="false" Show_id="false" Show_Val="false" Pos="348,204" rotation="0" hflip="1" vflip="1" label="Ground-50" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Node" CircId="Node-33" mainComp="false" Pos="44,100" />
+
+<item itemtype="Node" CircId="Node-45" mainComp="false" Pos="164,140" />
+
+<item itemtype="Node" CircId="Node-46" mainComp="false" Pos="216,92" />
+
+<item itemtype="Node" CircId="Node-51" mainComp="false" Pos="240,216" />
+
+<item itemtype="Node" CircId="Node-52" mainComp="false" Pos="284,92" />
+
+<item itemtype="Connector" uid="Connector-64" startpinid="Rail-28-outnod" endpinid="Amperimeter-18-lPin" pointList="-24,-20,-24,-12,28,-12,28,-20" />
+
+<item itemtype="Connector" uid="Connector-66" startpinid="Fixed Voltage-29-outnod" endpinid="thermal_mosfet-13-PORTAG" pointList="-20,140,12,140" />
+
+<item itemtype="Connector" uid="Connector-67" startpinid="thermal_mosfet-13-PORTAS" endpinid="Ground-2-Gnd" pointList="44,164,44,188" />
+
+<item itemtype="Connector" uid="Connector-71" startpinid="DcMotor-31-lPin" endpinid="Amperimeter-18-rPin" pointList="44,-4,44,-20" />
+
+<item itemtype="Connector" uid="Connector-72" startpinid="Probe-32-inpin" endpinid="Node-33-1" pointList="76,100,44,100" />
+
+<item itemtype="Connector" uid="Connector-73" startpinid="DcMotor-31-rPin" endpinid="Node-33-0" pointList="44,76,44,100" />
+
+<item itemtype="Connector" uid="Connector-74" startpinid="Node-33-2" endpinid="thermal_mosfet-13-PORTAD" pointList="44,100,44,116" />
+
+<item itemtype="Connector" uid="connector-76" startpinid="DcMotor-38-lPin" endpinid="Amperimeter-37-rPin" pointList="216,-4,216,-20" />
+
+<item itemtype="Connector" uid="connector-78" startpinid="thermal_mosfet-36-PORTAS" endpinid="Ground-42-Gnd" pointList="216,164,216,188" />
+
+<item itemtype="Connector" uid="connector-81" startpinid="Rail-40-outnod" endpinid="Amperimeter-37-lPin" pointList="148,-20,148,-12,200,-12,200,-20" />
+
+<item itemtype="Connector" uid="connector-82" startpinid="thermal_mosfet-43-PORTAS" endpinid="Ground-44-Gnd" pointList="284,164,284,188" />
+
+<item itemtype="Connector" uid="Connector-84" startpinid="Fixed Voltage-41-outnod" endpinid="Node-45-0" pointList="152,140,164,140" />
+
+<item itemtype="Connector" uid="Connector-85" startpinid="Node-45-2" endpinid="thermal_mosfet-36-PORTAG" pointList="164,140,184,140" />
+
+<item itemtype="Connector" uid="Connector-88" startpinid="DcMotor-38-rPin" endpinid="Node-46-0" pointList="216,76,216,92" />
+
+<item itemtype="Connector" uid="Connector-89" startpinid="Node-46-2" endpinid="thermal_mosfet-36-PORTAD" pointList="216,92,216,116" />
+
+<item itemtype="Connector" uid="connector-90" startpinid="thermal_mosfet-48-PORTAS" endpinid="Ground-50-Gnd" pointList="348,164,348,188" />
+
+<item itemtype="Connector" uid="Connector-91" startpinid="thermal_mosfet-48-PORTAG" endpinid="Node-51-1" pointList="316,140,304,140,304,216,240,216" />
+
+<item itemtype="Connector" uid="Connector-93" startpinid="Node-51-2" endpinid="Node-45-1" pointList="240,216,164,216,164,140" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="Node-52-1" endpinid="thermal_mosfet-48-PORTAD" pointList="284,92,348,92,348,116" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="thermal_mosfet-43-PORTAD" endpinid="Node-52-0" pointList="284,116,284,92" />
+
+<item itemtype="Connector" uid="Connector-96" startpinid="Node-52-2" endpinid="Node-46-1" pointList="284,92,216,92" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="thermal_mosfet-43-PORTAG" endpinid="Node-51-0" pointList="252,140,240,140,240,216" />
+
+</circuit>

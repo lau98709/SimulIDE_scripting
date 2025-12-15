@@ -1,0 +1,21 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="thermal_mosfet" core="scripted" script="thermal_mosfet.as" linker="true" >
+
+	<display name="screen" width="64" height="64" embeed="true" monitorpos="0" monitorscale="1.5"/>
+    
+    <ioport name="PORTA" pins="D,G,S" />
+    
+	<propertygroup name="group name">
+		<property name="P_channel" type="bool" />
+		<property name="RDSon" type="double" />
+		<property name="VGS" type="double" />
+		<property name="Rth" type="double" />
+		<property name="Cth" type="double" />
+		<property name="Show_temp" type="bool" />
+		<property name="T_max" type="double" />
+		<property name="T_limit" type="double" />		
+		<property name="simulate" type="bool" />
+	</propertygroup>
+    
+</iou>

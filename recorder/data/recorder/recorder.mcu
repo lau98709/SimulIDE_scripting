@@ -1,0 +1,18 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="recorder" core="scripted" script="recorder.as" linker="true" >
+
+	<display name="screen" width="160" height="60" embeed="true" monitorpos="0" monitorscale="1.0"/>
+
+	<ioport name="PORTA" pins="A,B,Tx,Rx,S" />
+
+	<usart name="Uart0" number="1">
+		<trunit type="tx" pin="Tx" />
+		<trunit type="rx" pin="Rx" />
+	</usart>
+  
+	<propertygroup name="group name">
+		<property name="Property1" type="double" />
+	</propertygroup>
+
+</iou>

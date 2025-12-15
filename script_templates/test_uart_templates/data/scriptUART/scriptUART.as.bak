@@ -1,0 +1,88 @@
+
+const uint64 MILLISECOND = 1000000000;
+const uint64 SECOND = 1000*MILLISECOND;
+
+IoPin@  txPin = component.getPin("Tx");
+IoPin@  rxPin = component.getPin("Rx");
+
+uint count;
+
+array<int> sendbuf;
+
+enum pinModes{
+    uart_undef=0, 
+    uart_input,
+    uart_openCo,
+    uart_output,
+    uart_source
+}
+
+const int BAUDRATE = 115200;
+bool busy = false;
+
+void setup() // Executed when Component is created
+{
+    print("Serial setup() OK"); 
+}
+
+void reset() // Executed at Simulation start
+{
+    print("Serial reset()");
+    
+    Uart0.setBaudRate( BAUDRATE );
+    
+    txPin.setOutState( true );
+    txPin.setPinMode( uart_output );
+	rxPin.setPinMode( uart_input );
+	
+	count = 0;
+	sendbuf.resize(0);
+	busy = false;
+	
+	component.addEvent(5*MILLISECOND);
+}
+
+
+void updateStep() {
+	sendString(""+count+"\n");
+	count++;
+}
+
+
+void voltChanged() {
+}
+
+
+void runEvent() {
+	polling();
+	component.addEvent(1*MILLISECOND);
+}
+
+
+void frameSent( uint data )
+{
+    // print( "frameSent "+data );
+	busy = false;
+}
+
+void byteReceived( uint data )
+{
+    print( "byte Received "+data );
+}
+
+void polling() {
+	if (!busy) {
+		if (sendbuf.length() > 0) {
+			busy = true;
+			int c = sendbuf[0];
+			sendbuf.removeAt(0);
+			Uart0.sendByte(c);
+		}
+	}
+}
+
+void sendString( string &in txt ) {
+	for (uint i=0; i<txt.length(); i++) {
+		sendbuf.insertLast(txt[i]);
+	}
+}

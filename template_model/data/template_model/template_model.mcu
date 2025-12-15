@@ -1,0 +1,13 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="template_model" core="scripted" script="template_model.as" linker="true" >
+
+	<display name="screen" width="256" height="256" embeed="true" monitorpos="0" monitorscale="1.0"/>
+
+	<ioport name="PORTA" pins="A,B,P" />
+
+	<propertygroup name="group name">
+		<property name="Property1" type="double" />
+	</propertygroup>
+
+</iou>

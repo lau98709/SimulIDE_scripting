@@ -1,0 +1,12 @@
+<!DOCTYPE SimulIDE>
+
+<iou name="NTC_thermistor" core="scripted" script="NTC_thermistor.as" linker="true" >
+
+	<ioport name="PORTA" pins="A,B" />
+
+	<propertygroup name="group name">
+		<property name="R0" type="double" />
+		<property name="Beta" type="double" />
+	</propertygroup>
+
+</iou>
