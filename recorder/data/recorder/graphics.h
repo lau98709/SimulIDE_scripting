@@ -401,12 +401,9 @@ void fillCircle(int xc, int yc, int r, uint color)
 
 
 void fillRectangle( int x1, int y1, int x2, int y2, uint color ) {
-	array<array<double>> p;
-	p.insertLast({x1,y1});
-	p.insertLast({x2,y1});
-	p.insertLast({x2,y2});
-	p.insertLast({x1,y2});
-	fillPolygon(p,color);
+    for (int y=y1; y<y2; y++) {
+        drawHorizontalLine(y, x1, x2, color);
+    }
 }
 
 

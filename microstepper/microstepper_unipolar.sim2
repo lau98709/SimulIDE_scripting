@@ -1,0 +1,41 @@
+<circuit version="2.0.0-" rev="250808" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" anicurr="0" width="3200" height="2400" >
+
+<item itemtype="Subcircuit" CircId="Nano-10" mainComp="false" Show_id="true" Show_Val="false" Pos="-408,12" rotation="-180" hflip="1" vflip="1" label="Nano-10" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="microstepping_unipolar/microstepping_unipolar.ino.eightanaloginputs.hex" Auto_Load="true" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Ground" CircId="Ground-26" mainComp="false" Show_id="false" Show_Val="false" Pos="-188,132" rotation="0" hflip="1" vflip="1" label="Ground-26" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="TextComponent" CircId="TextComponent-33" mainComp="false" Show_id="false" Show_Val="false" Pos="-216,-28" rotation="0" hflip="1" vflip="1" label="TextComponent-33" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="116.414" />
+
+<item itemtype="TextComponent" CircId="TextComponent-35" mainComp="false" Show_id="false" Show_Val="false" Pos="-216,-64" rotation="0" hflip="1" vflip="1" label="TextComponent-35" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="3233" />
+
+<item itemtype="MCU" CircId="microstepper-40" mainComp="false" Show_id="true" Show_Val="true" Pos="-164,4" rotation="0" hflip="1" vflip="1" label="microstepper-40" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Poles="1" Inertia="0.05" Friction="50" Bipolar="false" Links="TextComponent-35,TextComponent-33," MainMcu="false" />
+
+<item itemtype="Buffer" CircId="Buffer-41" mainComp="false" Show_id="false" Show_Val="false" Pos="-268,36" rotation="0" hflip="1" vflip="1" label="Buffer-41" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" invertPins="Pin_outEnable," Small="false" Family="Custom" SupplyV="5 V" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" InPullups="0 Ω" initHigh="false" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Oen_Imped="1e+16 Ω" Pullups="0 Ω" Open_Collector="false" Tristate="false" pd_n="1" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" />
+
+<item itemtype="Buffer" CircId="Buffer-42" mainComp="false" Show_id="false" Show_Val="false" Pos="-268,100" rotation="0" hflip="1" vflip="1" label="Buffer-42" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" invertPins="Pin_outEnable," Small="false" Family="Custom" SupplyV="5 V" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" InPullups="0 Ω" initHigh="false" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Oen_Imped="1e+16 Ω" Pullups="0 Ω" Open_Collector="false" Tristate="false" pd_n="1" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" />
+
+<item itemtype="Buffer" CircId="Buffer-43" mainComp="false" Show_id="false" Show_Val="false" Pos="-268,84" rotation="0" hflip="1" vflip="1" label="Buffer-43" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" invertPins="Pin_outEnable," Small="false" Family="Custom" SupplyV="5 V" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" InPullups="0 Ω" initHigh="false" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Oen_Imped="1e+16 Ω" Pullups="0 Ω" Open_Collector="false" Tristate="false" pd_n="1" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" />
+
+<item itemtype="Buffer" CircId="Buffer-44" mainComp="false" Show_id="false" Show_Val="false" Pos="-268,52" rotation="0" hflip="1" vflip="1" label="Buffer-44" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" invertPins="Pin_outEnable," Small="false" Family="Custom" SupplyV="5 V" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" InPullups="0 Ω" initHigh="false" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Oen_Imped="1e+16 Ω" Pullups="0 Ω" Open_Collector="false" Tristate="false" pd_n="1" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" />
+
+<item itemtype="Connector" uid="Connector-88" startpinid="Ground-26-Gnd" endpinid="microstepper-40-PORTACOM" pointList="-188,116,-188,68,-172,68" />
+
+<item itemtype="Connector" uid="Connector-89" startpinid="Buffer-42-out" endpinid="microstepper-40-PORTAB2" pointList="-252,100,-172,100" />
+
+<item itemtype="Connector" uid="Connector-90" startpinid="Buffer-43-out" endpinid="microstepper-40-PORTAA2" pointList="-252,84,-172,84" />
+
+<item itemtype="Connector" uid="Connector-91" startpinid="Buffer-44-out" endpinid="microstepper-40-PORTAB1" pointList="-252,52,-172,52" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="Buffer-41-out" endpinid="microstepper-40-PORTAA1" pointList="-252,36,-172,36" />
+
+<item itemtype="Connector" uid="Connector-93" startpinid="Nano-10-11" endpinid="Buffer-41-in0" pointList="-352,44,-324,44,-324,36,-284,36" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="Nano-10-10" endpinid="Buffer-44-in0" pointList="-352,52,-284,52" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="Nano-10-9" endpinid="Buffer-43-in0" pointList="-352,60,-300,60,-300,84,-284,84" />
+
+<item itemtype="Connector" uid="Connector-96" startpinid="Nano-10-6" endpinid="Buffer-42-in0" pointList="-352,84,-324,84,-324,100,-284,100" />
+
+</circuit>

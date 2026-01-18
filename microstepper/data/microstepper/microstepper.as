@@ -95,7 +95,7 @@ void setLinkedValue( double val, int arg ) {
 	// fait un setLinkValue()
 	// val : valeur mise à jour
 	// arg : valeur entière supplémentaire
-	
+    print(val+" "+arg);
 }
 
 //---------------------------------------------------------

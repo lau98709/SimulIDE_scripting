@@ -410,6 +410,16 @@ void fillRectangle( int x1, int y1, int x2, int y2, uint color ) {
 }
 
 
+void rectangle( int x1, int y1, int x2, int y2, uint color, uint width=1 ) {
+	array<array<double>> p;
+	p.insertLast({x1,y1});
+	p.insertLast({x2,y1});
+	p.insertLast({x2,y2});
+	p.insertLast({x1,y2});
+	drawFatPolygon(p, color, true, width);
+}
+
+
 // Fonction de tracé d'une ligne épaisse remplie par balayage de l'axe central.
 void drawFatLine(float x1, float y1, float x2, float y2, uint color, int thickness)
 {

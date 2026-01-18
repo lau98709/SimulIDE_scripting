@@ -1,0 +1,25 @@
+<circuit version="2.0.0-" rev="250808" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" anicurr="0" width="3200" height="2400" >
+
+<item itemtype="Voltage Source" CircId="Voltage Source-2" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-112,-4" rotation="0" hflip="1" vflip="1" label="Voltage Source-2" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="0 V" MaxValue="12 V" MinValue="0 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-3" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-160,28" rotation="0" hflip="1" vflip="1" label="Voltage Source-3" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="0.144 V" MaxValue="12 V" MinValue="0 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-4" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-112,100" rotation="0" hflip="1" vflip="1" label="Voltage Source-4" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="12 V" MaxValue="12 V" MinValue="0 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-7" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-160,132" rotation="0" hflip="1" vflip="1" label="Voltage Source-7" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="12 V" MaxValue="12 V" MinValue="0 V" />
+
+<item itemtype="Ground" CircId="Ground-8" mainComp="false" Show_id="false" Show_Val="false" Pos="-28,148" rotation="0" hflip="1" vflip="1" label="Ground-8" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="microstepper-40" mainComp="false" Show_id="true" Show_Val="true" Pos="-4,-4" rotation="0" hflip="1" vflip="1" label="microstepper-40" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Poles="1" Inertia="0.1" Friction="50" Bipolar="false" MainMcu="true" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Ground-8-Gnd" endpinid="microstepper-40-PORTACOM" pointList="-28,132,-28,60,-12,60" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Voltage Source-2-outPin" endpinid="microstepper-40-PORTAA1" pointList="-84,12,-28,12,-28,28,-12,28" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Voltage Source-3-outPin" endpinid="microstepper-40-PORTAB1" pointList="-132,44,-12,44" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="microstepper-40-PORTAA2" endpinid="Voltage Source-4-outPin" pointList="-12,76,-68,76,-68,116,-84,116" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Voltage Source-7-outPin" endpinid="microstepper-40-PORTAB2" pointList="-132,148,-60,148,-60,92,-12,92" />
+
+</circuit>

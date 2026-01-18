@@ -1,0 +1,61 @@
+<circuit version="2.0.0-" rev="250808" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" anicurr="0" width="3200" height="2400" >
+
+<item itemtype="Subcircuit" CircId="Nano-10" mainComp="false" Show_id="true" Show_Val="false" Pos="-284,4" rotation="-180" hflip="1" vflip="1" label="Nano-10" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="microstepping_bipolar/microstepping_bipolar.ino.eightanaloginputs.hex" Auto_Load="true" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="MCU" CircId="microstepper-1" mainComp="false" Show_id="true" Show_Val="true" Pos="-56,-12" rotation="0" hflip="1" vflip="1" label="microstepper-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Poles="1" Inertia="0.05" Friction="50" Bipolar="true" Links="TextComponent-35,TextComponent-33," MainMcu="false" />
+
+<item itemtype="MCU" CircId="hbridge-1" mainComp="false" Show_id="false" Show_Val="true" Pos="-156,12" rotation="0" hflip="1" vflip="1" label="hbridge-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" MainMcu="false" />
+
+<item itemtype="Ground" CircId="Ground-26" mainComp="false" Show_id="false" Show_Val="false" Pos="-76,132" rotation="0" hflip="1" vflip="1" label="Ground-26" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="TextComponent" CircId="TextComponent-33" mainComp="false" Show_id="false" Show_Val="false" Pos="-140,-56" rotation="0" hflip="1" vflip="1" label="TextComponent-33" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="135.721" />
+
+<item itemtype="TextComponent" CircId="TextComponent-35" mainComp="false" Show_id="false" Show_Val="false" Pos="-140,-92" rotation="0" hflip="1" vflip="1" label="TextComponent-35" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="2.36877" />
+
+<item itemtype="Ground" CircId="Ground-38" mainComp="false" Show_id="false" Show_Val="false" Pos="-172,152" rotation="0" hflip="1" vflip="1" label="Ground-38" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="hbridge-40" mainComp="false" Show_id="false" Show_Val="true" Pos="-156,84" rotation="0" hflip="1" vflip="1" label="hbridge-40" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" MainMcu="false" />
+
+<item itemtype="Rail" CircId="Rail-41" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-180,-28" rotation="90" hflip="1" vflip="1" label="Rail-41" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="12 V" />
+
+<item itemtype="Node" CircId="Node-42" mainComp="false" Pos="-172,132" />
+
+<item itemtype="Node" CircId="Node-43" mainComp="false" Pos="-180,-4" />
+
+<item itemtype="Connector" uid="Connector-102" startpinid="hbridge-1-PORTAGND" endpinid="Node-42-1" pointList="-136,52,-136,60,-172,60,-172,132" />
+
+<item itemtype="Connector" uid="Connector-103" startpinid="Ground-38-Gnd" endpinid="Node-42-0" pointList="-172,136,-172,132" />
+
+<item itemtype="Connector" uid="Connector-104" startpinid="Node-42-2" endpinid="hbridge-40-PORTAGND" pointList="-172,132,-136,132,-136,124" />
+
+<item itemtype="Connector" uid="Connector-106" startpinid="hbridge-1-PORTAVA" endpinid="Node-43-1" pointList="-136,4,-136,-4,-180,-4" />
+
+<item itemtype="Connector" uid="Connector-107" startpinid="Rail-41-outnod" endpinid="Node-43-0" pointList="-180,-12,-180,-4" />
+
+<item itemtype="Connector" uid="Connector-108" startpinid="Node-43-2" endpinid="hbridge-40-PORTAVA" pointList="-180,-4,-180,76,-136,76" />
+
+<item itemtype="Connector" uid="Connector-109" startpinid="hbridge-1-PORTAEN" endpinid="Nano-10-11" pointList="-164,36,-228,36" />
+
+<item itemtype="Connector" uid="Connector-110" startpinid="Nano-10-10" endpinid="hbridge-40-PORTAEN" pointList="-228,44,-204,44,-204,108,-164,108" />
+
+<item itemtype="Connector" uid="Connector-112" startpinid="Nano-10-12" endpinid="hbridge-1-PORTAIN2" pointList="-228,28,-164,28" />
+
+<item itemtype="Connector" uid="Connector-113" startpinid="hbridge-40-PORTAIN1" endpinid="Nano-10-9" pointList="-164,92,-188,92,-188,52,-228,52" />
+
+<item itemtype="Connector" uid="Connector-114" startpinid="hbridge-40-PORTAIN2" endpinid="Nano-10-8" pointList="-164,100,-196,100,-196,60,-228,60" />
+
+<item itemtype="Connector" uid="Connector-115" startpinid="hbridge-1-PORTAOUT1" endpinid="microstepper-1-PORTAA1" pointList="-108,20,-64,20" />
+
+<item itemtype="Connector" uid="Connector-116" startpinid="hbridge-1-PORTAOUT2" endpinid="microstepper-1-PORTAA2" pointList="-108,36,-100,36,-100,68,-64,68" />
+
+<item itemtype="Connector" uid="Connector-117" startpinid="Ground-26-Gnd" endpinid="microstepper-1-PORTACOM" pointList="-76,116,-76,52,-64,52" />
+
+<item itemtype="Connector" uid="Connector-119" startpinid="microstepper-1-PORTAB1" endpinid="hbridge-40-PORTAOUT1" pointList="-64,36,-92,36,-92,92,-108,92" />
+
+<item itemtype="Connector" uid="Connector-120" startpinid="hbridge-40-PORTAOUT2" endpinid="microstepper-1-PORTAB2" pointList="-108,108,-84,108,-84,84,-64,84" />
+
+<item itemtype="Connector" uid="Connector-111" startpinid="hbridge-1-PORTAIN1" endpinid="Nano-10-13" pointList="-164,20,-188,20,-188,-4,-292,-4,-292,28,-276,28" />
+
+</circuit>

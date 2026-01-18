@@ -149,8 +149,9 @@ class Motor {
 	void draw( int width, int height ) {
 		//  Dessin du moteur
 		
-		clear();
-		screen.setBackground(0x7070A0);
+		// clear();
+		// screen.setBackground(0x7070A0);
+        fillRectangle(0, 0, width, height, 0x7070A0);
 
 		double x0 = width/2;
 		double y0 = height/2;
