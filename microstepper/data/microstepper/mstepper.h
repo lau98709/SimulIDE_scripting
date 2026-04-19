@@ -19,6 +19,7 @@ class Motor {
 	bool bipolar;
 	double friction, inertia;
 	double angle, speed, last_t;
+    double angle0;
 	
 	Motor() {
 	}
@@ -34,6 +35,8 @@ class Motor {
 		friction = 50;
 		bipolar = true;
 		last_t = time();
+        
+        angle0 = -1;
 		
 		a1_pn = a1;
 		b1_pn = b1;
@@ -58,6 +61,13 @@ class Motor {
 		A2_pin.changeCallBack(element, true);
 		B2_pin.changeCallBack(element, true);
 	} 
+    
+    
+    void reset() {
+        if (angle0 < 2*PI) {
+            angle = angle0;
+        }
+    }
 	
 	
 	void update( double t ) {
@@ -149,8 +159,6 @@ class Motor {
 	void draw( int width, int height ) {
 		//  Dessin du moteur
 		
-		// clear();
-		// screen.setBackground(0x7070A0);
         fillRectangle(0, 0, width, height, 0x7070A0);
 
 		double x0 = width/2;
@@ -161,7 +169,7 @@ class Motor {
 		double rs = width/2*0.8;
 		
 		stepperDrawStator(x0, y0, rr, rr2, poles, 0xFFFFFF);
-		stepperDrawRotor(x0, y0, rs, angle, 0xFFFF00);
+		stepperDrawRotor(x0, y0, rs, PI+angle, 0xFFFF00);
 	}
 
 

@@ -26,6 +26,18 @@ Motor motor = Motor("A1", "B1", "A2", "B2", "COM");
 //
 //---------------------------------------------------------
 
+//  Paramètre "Start angle"
+//  Angle de départ
+//  > 2*PI => ne pas changer
+
+void setStart_angle( double val ) {
+	motor.angle0 = val*PI/180.0;
+}
+
+double getStart_angle() {
+	return motor.angle0*180.0/PI;
+}
+
 void setInertia( double val ) {
 	motor.inertia = val;
 }
@@ -68,6 +80,7 @@ void setup() {
 
 void reset() {
     print("resetting component");
+    motor.reset();
 	
 	component.addEvent(10*MILLISECOND);
 }

@@ -355,6 +355,9 @@ float randomFloat() {
     return float(randomInt()) / 2147483647.0; // 2147483647 = 0x7FFFFFFF
 }
 
+//---------------------------------------------------------
+//--- SPECIAL FUNCTIONS -----------------------------------
+//---------------------------------------------------------
 
 // Calcul des bits en code gray
 array<bool> gray(uint i, uint n) {

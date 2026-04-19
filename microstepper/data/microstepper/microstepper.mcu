@@ -8,6 +8,7 @@
 
 	<propertygroup name="group name">
 		<property name="Poles" type="uint" />
+		<property name="Start_angle" type="double" />
 		<property name="Inertia" type="double" />
 		<property name="Friction" type="double" />
 		<property name="Bipolar" type="bool" />

@@ -5,6 +5,7 @@
 //  Le courant est calculé à partir de la différence de tension
 //  aux bornes de la résistance.
 
+#include "math.h"
 #include "graphics.h"
 
 IoPin@ a_pin = component.getPin("a");
